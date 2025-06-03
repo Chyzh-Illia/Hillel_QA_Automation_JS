@@ -1,0 +1,22 @@
+{
+  "name": "hillel_js_automation",
+  "version": "1.0.0",
+  "description": "-",
+  "main": ".index.js",
+  "scripts": {
+    "test": "node ./nodeBasics/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chyzh-Illia/Hillel_QA_Automation_JS.git"
+  },
+  "author": "Chyzh Illia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chyzh-Illia/Hillel_QA_Automation_JS/issues"
+  },
+  "homepage": "https://github.com/Chyzh-Illia/Hillel_QA_Automation_JS#readme",
+  "dependencies": {
+    "chalk": "^5.4.1"
+  }
+}
