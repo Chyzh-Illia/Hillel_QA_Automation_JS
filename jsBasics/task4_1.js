@@ -1,5 +1,5 @@
 'use strict';
 
 let radius = 13;
-
-console.log(Math.PI * (radius**2));
+let results = Math.PI * (radius**2);
+console.log(`Площа кола за формулою π * radius^2 = ${results}`);
