@@ -2,7 +2,7 @@
 
 let averageGrade = 102;
 
-if (averageGrade < 60) {
+if (averageGrade <= 60) {
     console.log('Незадовільно');
 }   else if (averageGrade >= 60 && averageGrade <= 70) {
     console.log('Задовільно');
