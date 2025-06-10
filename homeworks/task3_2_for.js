@@ -3,7 +3,7 @@
 const constNumber = 39;
 let multiplyFunction = '';
 
-for (let i = 1; i <= 10; i++) {
-    multiplyFunction = constNumber * i;
-    console.log(`${constNumber} x ${i} = ${multiplyFunction}`);
+for (let count = 1; count <= 10; count++) {
+    multiplyFunction = constNumber * count;
+    console.log(`${constNumber} x ${count} = ${multiplyFunction}`);
 }
