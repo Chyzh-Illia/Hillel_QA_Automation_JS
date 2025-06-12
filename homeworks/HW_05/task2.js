@@ -18,6 +18,4 @@ switch (true) {
     case (averageGrade <= 100):
         console.log('Відмінно');
         break;
-    default:
-        console.log('Enter the positive number 100+');
 }

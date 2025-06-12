@@ -1,8 +1,10 @@
 'use strict';
 
-let averageGrade = 70;
+let averageGrade = -80;
 
-if (averageGrade < 60) {
+if (averageGrade <= 0) {
+    console.log('Введи позитивне число');
+}   else if (averageGrade < 60) {
     console.log('Незадовільно');
 }   else if (averageGrade <= 70) {
     console.log('Задовільно');
@@ -12,4 +14,4 @@ if (averageGrade < 60) {
     console.log('Дуже добре');
 }   else if (averageGrade <= 100) {
     console.log('Відмінно');
-}   else console.log('Enter the positive number 100+');
+}
