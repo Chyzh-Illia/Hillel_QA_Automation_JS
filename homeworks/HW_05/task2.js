@@ -6,7 +6,7 @@ switch (true) {
     case (averageGrade <= 0):
         console.log('Введи позитивне число');
         break;
-    case (averageGrade <= 60):
+    case (averageGrade < 60):
         console.log('Незадовільно');
         break;
     case (averageGrade <= 70):
