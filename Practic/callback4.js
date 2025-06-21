@@ -8,14 +8,16 @@
 //   return result;
 // }
 
-function customFilter(arr, callback) {
-  return arr.filter(callback);
-}
+// function customFilter(arr, callback) {
+//   return arr.filter(callback);
+// }
 
-const result = customFilter([10, 15, 20, 25], function(item) {
+const customFilter = (arr, callback) => arr.filter(callback);
+
+const resultarr = customFilter([10, 15, 20, 25], function(item) {
   return item > 15;
 });
-console.log(result); // [20, 25]
+console.log(resultarr); // [20, 25]
 
 
 
