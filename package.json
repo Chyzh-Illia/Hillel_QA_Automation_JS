@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Chyzh-Illia/Hillel_QA_Automation_JS#readme",
   "dependencies": {
     "chalk": "^5.4.1"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3"
   }
 }
