@@ -1,5 +1,7 @@
-function fu(firstName, lastName) {
-    console.log(`${firstName} ${lastName}`);
-}
+const fu = (firstName, lastName) => {
+    setTimeout(() => {
+        console.log(firstName, lastName);
+    }, 5000);
+};
 
-setTimeout(fu, 5000, 'John', 'Snow');
+fu('John', 'Snow');
