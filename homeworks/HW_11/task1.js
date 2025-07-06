@@ -1,7 +1,7 @@
-const fu = (firstName, lastName) => {
+const fu = (firstName, lastName, delay) => {
     setTimeout(() => {
         console.log(firstName, lastName);
-    }, 5000);
+    }, delay);
 };
 
-fu('John', 'Snow');
+fu('John', 'Snow', 5000);
