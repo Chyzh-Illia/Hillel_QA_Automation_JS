@@ -5,7 +5,8 @@
   "main": ".index.js",
   "type": "module",
   "scripts": {
-    "test": "node ./nodeBasics/index.js"
+    "test": "node ./nodeBasics/index.js",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,20 @@
     "chalk": "^5.4.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "eslint": "^9.30.1",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "pre-commit": "^1.2.2",
     "prettier": "3.5.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   }
 }
