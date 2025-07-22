@@ -1,18 +1,7 @@
-const axios = require(`axios`);
-
-
-async function getUserInfo() {
-    try{
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
-    return await response.data;    
-    }
-    catch(error){
-        console.error(`Error message: ${error}`);
-        return null;
-    }
-}
+const { getUserInfo } = require(`./customControllers.js`);
 
 test(`get response data:`, async () => {
-    const data = await getUserInfo();
-    expect(data.userId).toBe(1)
+  const data = await getUserInfo();
+  expect(data).not.toBeNull();
+  expect(data.userId).toBe(1);
 });
