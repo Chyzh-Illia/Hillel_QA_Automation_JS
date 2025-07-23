@@ -57,3 +57,52 @@ test('Request contains correct headers and params', async () => {
     }),
   );
 });
+
+
+// Завдання 3
+
+// Назва: Mocking Axios in Jest Складність: складний
+
+// Замість того, щоб робити фактичні HTTP-запити, використовуйте Jest, щоб налаштувати моки на реквести з Axios.
+// Напишіть тести, які імітують як успішні, так і невдалі HTTP-запити, до замоканих ендпойнтів, і переконайтеся, що ваш код поводиться належним чином.
+
+
+async function getUserInfo(id) {
+    const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
+    return response.data;
+}
+
+test('should return mocked user data', async () => {
+  const mockedUser = {
+    id: 1,
+    name: 'John Doe',
+    username: 'johnd',
+  };
+
+  axios.get.mockResolvedValue({ data: mockedUser });
+
+  const result = await getUserInfo(1);
+
+  expect(result).toEqual(mockedUser);
+  expect(axios.get).toHaveBeenCalledWith('https://jsonplaceholder.typicode.com/users/1');
+});
+
+async function  putUser(id) {
+  const response = await axios.put('https://jsonplaceholder.typicode.com/users/1');
+  return response.data;
+}
+
+test('put data for user == return mocked data', async () => {
+  const putMockedUser = {
+    id: 55,
+    firstName: 'John',
+    lastName: 'Snow'
+  }
+
+  axios.put.mockResolvedValue({data: putMockedUser});
+
+  const result = await putUser(10);
+
+  expect(result).toEqual(putMockedUser);
+  expect(axios.put).toHaveBeenCalledWith('https://jsonplaceholder.typicode.com/users/1');
+})
